@@ -1,0 +1,10 @@
+CREATE TABLE books (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    category VARCHAR(100) NOT NULL,
+    isbn VARCHAR(50) UNIQUE NOT NULL
+);
+
+
+SELECT * FROM books;

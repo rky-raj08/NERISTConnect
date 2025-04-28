@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(#ccefff, #e0f7ff);
+    overflow-x: hidden;
+}
+
+.container {
+    background: white;
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0077b6;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #cce3f6;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    font-size: 15px;
+}
+
+input:focus, textarea:focus {
+    border-color: #0077b6;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00b4d8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0077b6;
+}
+
+.success {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+/* Water Drop Animation */
+.animation {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.tap {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.pipe {
+    width: 20px;
+    height: 60px;
+    background: #444;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.drop {
+    width: 12px;
+    height: 12px;
+    background: #00b4d8;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: dropFall 1.5s infinite;
+}
+
+@keyframes dropFall {
+    0% {
+        top: 60px;
+        opacity: 1;
+    }
+    70% {
+        top: 100px;
+        opacity: 1;
+    }
+    100% {
+        top: 100px;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

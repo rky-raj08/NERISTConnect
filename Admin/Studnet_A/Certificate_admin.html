@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Certificate Requests</title>
+    <link rel="stylesheet" href="admin_cert.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Certificate Applications</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Student Name</th>
+                    <th>Roll Number</th>
+                    <th>Email</th>
+                    <th>Certificate Type</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="certificateTable">
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="admin_cert.js"></script>
+    <script src="certificate_email.js"></script>
+</body>
+</html>

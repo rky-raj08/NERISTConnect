@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management Awareness</title>
+    <link rel="stylesheet" href="waste.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Waste Management Awareness</h1>
+        <h2>Let's Keep Our Planet Clean</h2>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <i class="fas fa-recycle"></i>
+            <h3>Reduce, Reuse, Recycle</h3>
+            <p>Practice reducing waste by reusing items and recycling materials whenever possible.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-trash-alt"></i>
+            <h3>Proper Disposal</h3>
+            <p>Ensure waste is disposed of properly to avoid littering and environmental harm.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-leaf"></i>
+            <h3>Sustainable Practices</h3>
+            <p>Adopt sustainable practices like composting to minimize waste and enrich soil.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Spread the Word</h3>
+            <p>Share information and educate others about the importance of waste management.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Waste Management Initiative. All rights reserved.
+    </footer>
+
+    <script>
+        // Animate cards on load
+        const cards = document.querySelectorAll('.card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+            card.style.opacity = '1';  // Ensure cards are visible
+        });
+    </script>
+</body>
+</html>

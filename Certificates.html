@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Application</title>
+    <link rel="stylesheet" href="Cert.css">
+</head>
+<body>
+    <div class="floating-box"></div>
+    <div class="container">
+        <h1>Certificate Application</h1>
+        <form >
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="roll">Roll Number</label>
+            <input type="text" id="roll" name="roll" placeholder="Enter your roll number" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="certificate">Select Certificate</label>
+            <select id="certificate" name="certificate" required>
+                <option value="Bonafide">Bonafide Certificate</option>
+                <option value="Rank">Rank Certificate</option>
+                <option value="Scholarship">Scholarship Certificate</option>
+                <option value="Character">Character Certificate</option>
+                <option value="Duplicate degree">Duplicate Degree Certificate</option>
+                <option value="Institute leaving">Institute leaving Certificate</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="reason">Reason for Application</label>
+            <textarea id="reason" name="reason" placeholder="Explain why you need this certificate..." required></textarea>
+
+            <button type="submit">Apply</button>
+        </form>
+    </div>
+    <script src="script_cert.js"></script>
+    
+</body>
+</html>

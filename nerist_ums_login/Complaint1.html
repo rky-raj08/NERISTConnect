@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Page</title>
+    <link rel="stylesheet" href="Com.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS User ID
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Raise Your Concern</h1>
+        <form id="complaintForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone (Optional)</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="category">Complaint Category</label>
+            <select id="category" name="category" required>
+                <option value="Technical">Technical</option>
+                <option value="Internet">Internet</option>
+                <option value="Water">Academic</option>
+                <option value="Administrative">Administrative</option>
+                <option value="Mess">Mess</option>
+                <option value="Hostel">Hostel</option>
+                <option value="Ragging">Ragging</option>
+                <option value="Academic">Other</option>
+            </select>
+
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="details">Complaint Details</label>
+            <textarea id="details" name="details" rows="5" required></textarea>
+
+            <label for="file">Attach a File (Optional)</label>
+            <input type="file" id="file" name="file">
+
+            <button type="submit">Submit Complaint</button>
+        </form>
+        <div id="response"></div>
+    </div>
+
+    <!-- Link to External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

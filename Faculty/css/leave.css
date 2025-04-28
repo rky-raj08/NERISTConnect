@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0a9396;
+}
+
+/* Designing navigation bar */
+
+#navbar ul{
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 28px; 
+}
+#navbar ul li a{
+    text-decoration: none;
+    color:white;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    /* height: 60px; */
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+
+.leave-container {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    /* display: flex;
+    flex-wrap: wrap; */
+    height: auto;
+    width: 720px;
+    background-color: #e7e7ee;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+h1{
+    height: 30px;
+    text-align: center;
+}
+
+.form-group{
+    padding-left: 25px;
+    padding-right: 35px;
+    margin-bottom: 1px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    /* margin-bottom: 5px; */
+    color: black;
+}
+/* input, text{
+    width:80%;
+} */
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+textarea {
+    resize: vertical;
+}
+
+button.submit-btn {
+    margin-left: 80px;
+    margin-top: 20px;
+    display: block;
+    /* margin: auto; */
+    width: 80%;
+    /* padding: 10px; */
+    background-color:rgb(5, 129, 145);
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 26px;
+    cursor: pointer;
+    margin-bottom:10px
+}
+
+button.submit-btn:hover {
+    background-color: #45a049;
+}
+
+footer{
+    background-color: #0044cc;
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+

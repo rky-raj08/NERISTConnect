@@ -1,0 +1,86 @@
+/* Apply a full-screen gradient background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container styling */
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: #ffffffdd;
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 2em 3em;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin: 2em auto;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 2em;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+input, textarea, button {
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #7b9acc;
+  box-shadow: 0 0 5px rgba(123, 154, 204, 0.5);
+}
+
+/* Button styling */
+button {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357abd;
+}
+
+/* This will make placeholder text bold */
+input::placeholder,
+textarea::placeholder {
+  font-weight: bold;
+  color: #555; /* optional: darken color so it's more readable */
+}
+
+/* Track result box */
+#trackResult {
+  margin-top: 1em;
+  background: #eef7ff;
+  padding: 1em;
+  border-left: 5px solid #4a90e2;
+  border-radius: 8px;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #333;
+}

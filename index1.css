@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+
+}
+
+.left-section {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+
+}
+
+.logo img {
+    width: 120px;
+    margin: 20px;
+}
+
+.logo,
+.welcome-text {
+    z-index: 1;
+}
+
+.left-section .background-image img {
+    top: 0;
+    position: absolute;
+    width: 100%;    /* Image takes full width of the left section */
+    height: 100%;    /* Height adjusts to maintain aspect ratio */
+    object-fit: cover;    /* Ensures image covers the container, cropping if needed */
+    border-radius: 10px;
+}
+
+.welcome-text {
+    color: rgb(63, 186, 147);
+
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+    gap: 20px;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.login-box {
+    width: 350px;
+    padding: 25px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #999;
+}
+
+.toggle-password {
+    right: 10px;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00695c;
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #00796b;
+    text-decoration: none;
+}

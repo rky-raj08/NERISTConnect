@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Selection Page</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <h1>Welcome to NERISTConnect!</h1>
+        <p>Please select your role:</p>
+        <button class="btn" onclick="selectUser('student')">Student</button>
+        <button class="btn" onclick="selectUser('faculty')">Faculty</button>
+        <button class="btn" onclick="selectUser('admin')">Admin</button>
+
+        <div id="query-box" class="query-box" style="display:none;">
+            <h3>Redirecting you to the appropriate page...</h3>
+        </div>
+    </div>
+
+    <script src="./script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Books</title>
+    <link rel="stylesheet" href="Library_front.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Library Books</h1>
+
+        <!-- 🔍 Search bar -->
+        <input type="text" id="searchInput" placeholder="Search by book name..." onkeyup="filterBooks()" style="margin-bottom: 15px; padding: 8px; width: 50%; font-size: 16px;">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>ISBN</th>
+                </tr>
+            </thead>
+            <tbody id="bookTable">
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="Library_front.js"></script>
+</body>
+</html>

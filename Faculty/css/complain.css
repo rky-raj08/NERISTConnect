@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0a9396;
+}
+
+#navbar ul{
+    background-color: blue;
+    display: flex;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 23px;
+   
+}
+
+#navbar ul li a{
+    display: block;
+    padding: 3px 164px;
+    border-radius: 2px;
+    text-decoration: none;
+    color:white;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.container {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 55px;
+    height: 643px;
+    width: 840px;
+    background-color: hsl(210, 33%, 99%);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#complaintForm {
+    padding: 22px;
+}
+
+.form-group{
+    padding-left: 25px;
+    padding-right: 35px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    color: black;
+}
+input, textarea {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+textarea {
+    resize: vertical;
+}
+select{
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color:#0a9396;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.submit-btn:hover {
+    background-color: green;
+}
+
+footer{
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px;
+}

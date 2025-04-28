@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeristConnect-Leave Application</title>
+    <link rel="stylesheet" href="/Faculty/css/leave.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item"><a href="#">About</a></li>
+                <li class="item"><a href="#">Modules</a></li>
+                <li class="item"><a href="/Faculty/pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--<h2 class="heading">Leave Application</h2>  -->
+    <div class="leave-container">
+        <h1>Leave application request</h1>
+        <form id="leave-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="designation">Designation:</label>
+                <input type="text" id="designation" name="designation" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department/Lab/WS:</label>
+                <input type="text" id="department" name="department" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="no_of_days">Type of leave to be approved and number of days:</label>
+                <input type="text" id="no_of_days" name="no_of_days" required>
+            </div>
+            <div class="form-group">
+                <label for="leave_date">Station leave required:</label>
+                <div class="form-group">
+                    <label for="departure_date">Departure date:</label>
+                    <input type="date" id="departure_date" name="departure_date" required>
+                    <label for="arrival_date">Arrival date:</label>
+                    <input type="date" id="arrival_date" name="arrival_date" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="reason">Purpose of Leave:</label>
+                <textarea id="reason" name="reason" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="substitution">Teaching load arrangement made During leave by the faculty member:</label>
+                <input type="text" id="substitution" name="substitution" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    <footer>
+        &copy; 2024 NERISTConnect - All rights reserved.
+    </footer>
+    <script src="/Faculty/js/leave.js"></script>
+</body>
+
+</html>

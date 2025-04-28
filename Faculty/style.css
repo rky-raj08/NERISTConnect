@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("images/photo.png");
+    background-size: cover;
+    overflow-y: auto;
+}
+
+/* Designing navigation bar */
+
+#navbar ul {
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 30px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* designing the container conataining box-container and news-update */
+.container {
+     margin: 5px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* padding: 20px; */
+    text-align: center;
+    /* gap: 10px; */
+    
+}
+
+.box-container {
+    margin-top: 42px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 792px;
+    justify-content: center;
+    
+}
+
+.box {
+    height: 140px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 4px rgba(56, 55, 55, 0.3);
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.box-text {
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    margin-top: 8px;
+}
+
+i {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* designing for the news container */
+
+.news-update {
+    /* background-color: #f9f9f9;  */
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+    /* margin-right: 55px; */
+    /* border-radius: 40px; */
+    width: 620px;
+    max-height: 400px;
+    /* overflow-y: auto; */
+    /* /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.news-update h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: blue;
+    text-align: center;
+}
+
+.news-item {
+    background: white;
+    padding: 12px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.news-item p {
+    font-size: 14px;
+    color: black;
+    margin: 0;
+}
+
+ .bottom-section {
+    margin: 9px;
+    /* display: flex; */
+    /* gap: 20px; */
+    /* Space between Announcement and FDP */
+    /* align-items: stretch; */
+    /* Important: makes them equal height */
+    /* flex-wrap: wrap; */
+} 
+
+/* Responsive Design */
+
+.announcement,
+h1 {
+    color: blue;
+    font-weight: bold;
+    /* padding-left: 10px; */
+    /* padding-top: 5px; */
+}
+
+.announcement {
+    margin-left: 20px;
+    /* height: 216px; */
+    width: 55%;
+    /* background-color: #f9f9f9; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(56, 55, 55, 7.1); */
+    /* margin-bottom: 45px; */
+}
+
+.announcement-container {
+    /* position: relative; */
+    width: 775px;
+    /* height: 151px; */
+    /* Adjust height as per need */
+    overflow: hidden;
+}
+
+.announcement-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 137px; */
+    /* margin: 6px 14px; */
+    background-color: rgb(240, 240, 246);
+    border-radius: 9px;
+}
+
+/* Container styling */
+.fdp-container {
+    margin-top: -148px;
+    /* margin-right: 58px; */
+    width: 560px;
+    background-color: #f9f9f9;
+    border-radius: 36px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 26px;
+    text-align: center;
+    margin-left: auto;
+}
+
+/* Ensure it aligns parallel to announcement section */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.announcement-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* .fdp-container {
+    flex: 0 0 300px;
+} */
+
+/* Header styling */
+.fdp-container h1 {
+    font-size: 25px;
+    color: blue;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Links styling */
+.fdp-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fdp-links a {
+    display: block;
+    background-color: #e2e9f0;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.fdp-links a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design  of fdp*/
+
+
+/* News Items */
+.news {
+    width: 100%;
+    font-size: 16px;
+    color: #222;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+/* Show Active Announcement */
+.news.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* View More Links */
+.view-more a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.view-more a:hover {
+    text-decoration: underline;
+}
+
+/* New Announcement Badge */
+.new-announcement {
+    background: #ff4757;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.nerist-info {
+    display: flex;
+    height: 100px;
+    background-color: rgb(54, 54, 77);
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.social-media,
+.imp-link {
+    list-style: none;
+    padding: 12px;
+    margin: 0;
+    display: flex;
+    gap: 66px;
+}
+
+.social-media li,
+.imp-link li {
+    display: inline-block;
+}
+
+.social-media a,
+.imp-link a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover,
+.imp-link a:hover {
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nerist-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-media,
+    .imp-link {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+footer {
+    background-color: #0044cc;
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .news-update,
+    .nerist-info {
+        width: 90%;
+        max-height: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box {
+        width: 120px;
+        height: 100px;
+    }
+
+    .box-text {
+        font-size: 16px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fdp-container {
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box-container {
+        gap: 10px;
+    }
+
+    .box {
+        width: 100px;
+        height: 90px;
+    }
+
+    .news-update {
+        width: 100%;
+        padding: 15px;
+    }
+}

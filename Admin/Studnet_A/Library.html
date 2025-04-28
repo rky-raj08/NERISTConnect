@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Admin Panel</title>
+    <link rel="stylesheet" href="library_admin.css">
+</head>
+<body>
+    <div class="library-container">
+        <h1>Library Management - Admin</h1>
+
+        <div class="form-container">
+            <h2>Add a New Book</h2>
+            <form id="bookForm">
+                <label for="bookName">Book Name</label>
+                <input type="text" id="bookName" required placeholder="Enter book name">
+
+                <label for="author">Author</label>
+                <input type="text" id="author" required placeholder="Enter author name">
+
+                <label for="category">Category</label>
+                <input type="text" id="category" required placeholder="Enter book category">
+
+                <label for="isbn">ISBN Number</label>
+                <input type="text" id="isbn" required placeholder="Enter ISBN number">
+
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+
+        <div class="table-container">
+            <h2>Library Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>ISBN</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="bookTable">
+                    <!-- Books will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="library_admin.js"></script>
+</body>
+</html>
