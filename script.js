@@ -26,34 +26,36 @@ const loginUser = async (username, password) => {
 }
 
 
-
 const handleLogin = async (e) => {
-    e.preventDefault()
-    const username = e.target[0].value
-    const password = e.target[1].value
-    const res = loginUser(username, password)
-    res
-        .then((response) => response.json())
-        .then(json => {
-            if(json.error){
-                alert(json.error)
-            }else{
-         
-                // redirect 
-                console.log(json.user);
-                localStorage.setItem("username",json.user.username)
-                localStorage.setItem("password",json.user.password_hash)
-                window.location.href = "./W_page.html"
-            }
-        })
-        .catch(err => {
-            console.log(err,"dskgn")
-        })
+    e.preventDefault();
+    const username = e.target[0].value;
+    const password = e.target[1].value;
 
-    // console.log(e.target[0].value)
-    // console.log(e.target[1].value)
+    try {
+        const res = await loginUser(username, password);
 
-}
+        // Check if the response is JSON
+        const contentType = res.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+            const text = await res.text(); // Read the plain error message
+            throw new Error(`Unexpected response: ${text}`);
+        }
+
+        const json = await res.json();
+
+        if (json.error) {
+            alert(json.error);
+        } else {
+            localStorage.setItem("username", json.user.username);
+            localStorage.setItem("password", json.user.password_hash);
+            window.location.href = "./W_page.html";
+        }
+    } catch (err) {
+        console.error("Login failed:", err.message);
+        alert("Login failed: " + err.message);
+    }
+};
+
 
 
 // loginBtn.addEventListener('click',handleLogin)
