@@ -1,0 +1,96 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    position: relative;
+}
+
+.overlay {
+    position: fixed; /* this will put image on full screen*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Nerist1.jpeg'); 
+    background-size: cover;
+    background-position: 100%;
+    filter: brightness(50%); /* This dims the background */
+    z-index: -1;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    color: #0072ff;
+    font-size: 28px;
+}
+
+.container p {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    background-color: #0072ff;
+}
+
+.btn:hover {
+    background-color: #005bb5;
+}
+
+.query-box {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #0072ff;
+    border-radius: 10px;
+    background: #f1f1f1;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+

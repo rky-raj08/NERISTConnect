@@ -17,6 +17,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../Front', 'index1.html'));
@@ -142,7 +143,9 @@ app.post('/login', async (req, res) => {
       'SELECT * FROM Accounts WHERE username = $1 AND password_hash = $2',
       [username,password_hash] 
     );
+
     console.log(result.rows)
+
     if (result.rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
