@@ -136,6 +136,7 @@ const transporter = nodemailer.createTransport({
 
 // User login route
 app.post('/login', async (req, res) => {
+  console.log(req.body,'dfghjkl')
   const { username, password_hash } = req.body;
 
   try {
