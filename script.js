@@ -1,10 +1,17 @@
 const loginForm = document.getElementById('login-form')
-
-
-
 // const handleLogin = () =>{    
 //     console.log('clicked')
 // }
+
+// dfghjkl;
+document.addEventListener('DOMContentLoaded', function(){
+    const username = localStorage.getItem('username')
+    const password = localStorage.getItem('password')
+    if(username && password){
+        window.location.href = "./W_page.html"
+    }
+})
+
 const loginUser = async (username, password) => {
     result = false;
     const res = await fetch('http://localhost:5000/login', {
@@ -17,6 +24,7 @@ const loginUser = async (username, password) => {
 
     return res;
 }
+
 
 
 const handleLogin = async (e) => {
@@ -51,3 +59,8 @@ const handleLogin = async (e) => {
 // loginBtn.addEventListener('click',handleLogin)
 
 loginForm.addEventListener('submit', (e) => handleLogin(e))
+
+
+
+
+

@@ -393,3 +393,98 @@ footer {
         padding: 15px;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container,
+    .announcement,
+    .announcement-container,
+    .fdp-container,
+    .news-update {
+        width: 95% !important;
+        margin: 10px auto !important;
+    }
+
+    .main-content {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .box-container {
+        width: 100% !important;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .box {
+        width: 45% !important;
+        height: auto;
+        padding: 10px;
+    }
+
+    .news-update {
+        max-height: none !important;
+        overflow-y: visible;
+        padding: 10px;
+    }
+
+    footer {
+        position: static;
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .nerist-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .social-media,
+    .imp-link {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        width: 80% !important;
+    }
+
+    .box-text {
+        font-size: 14px;
+    }
+
+    .fdp-container h1,
+    .announcement h1 {
+        font-size: 18px;
+    }
+
+    .fdp-links a {
+        font-size: 14px;
+    }
+
+    .news-item h3 {
+        font-size: 14px;
+    }
+
+    .news-item p {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    html, body {
+        height: auto !important;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+}

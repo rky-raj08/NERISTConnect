@@ -11,16 +11,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const userAvatar = document.getElementById('userChar');
     const userDetails = document.getElementById('userDetails');
     // const userEmail = document.getElementById('userEmail');
-    const userEmail2 = localStorage.getItem('username')
     // userEmail.innerText += " "+ userEmail2
+    
+    const logoutBtn = document.getElementById('logout-btn')
+    // dsghjkfghj
+    const userEmail2 = localStorage.getItem('username')
+    if(!userEmail2){
+        window.location.href = './index.html'
+    }
+    
+    logoutBtn.addEventListener('click', function () {
+        localStorage.removeItem('username')
+        localStorage.removeItem('password')
+        window.location.href = './index.html'
+    })
     let showId = false
     userAvatar.addEventListener('click', function () {
         showId = !showId
         if (showId) {
             userDetails.innerHTML += "<p >Email: " + userEmail2 + "</p>"
         }
-        else{
-            userDetails.innerHTML = ""   
+        else {
+            userDetails.innerHTML = ""
         }
     });
 
@@ -50,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-     // Handle Suggestion Box Submission
+    // Handle Suggestion Box Submission
     /* const suggestionBox = document.getElementById("suggestion-text");
      const submitButton = document.getElementById("submit-suggestion");
  

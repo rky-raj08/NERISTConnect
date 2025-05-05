@@ -86,3 +86,56 @@ textarea {
         transform: translateY(20px);
     }
 }
+
+
+nav {
+    background-color: #0056b3; /* Blue background */
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #cce6ff; /* Light blue on hover */
+}
+
+/* User Char and Details Styling */
+#userChar {
+    color: white;
+    background-color: #003d80;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+#userDetails {
+    color: white;
+    margin-top: 5px;
+    font-size: 14px;
+}

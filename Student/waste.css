@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -99,4 +100,89 @@ footer {
     background: rgba(255, 255, 255, 0.8); /* Light background for footer */
     animation: fadeIn 1.5s ease-in;
     color: #333; /* Dark color for footer text */
+}
+
+/* Responsive Fixes for Mobile Screens */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto; /* Allow scrolling on small screens */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .header {
+        padding: 30px 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    footer {
+        position: relative; /* Avoid overlapping content */
+    }
+}
+
+nav {
+    background-color: #0056b3; /* Blue background */
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #cce6ff; /* Light blue on hover */
+}
+
+/* User Char and Details Styling */
+#userChar {
+    color: white;
+    background-color: #003d80;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+#userDetails {
+    color: white;
+    margin-top: 5px;
+    font-size: 14px;
 }

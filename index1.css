@@ -1,3 +1,4 @@
+/**
 * {
     margin: 0;
     padding: 0;
@@ -40,9 +41,9 @@ body {
 .left-section .background-image img {
     top: 0;
     position: absolute;
-    width: 100%;    /* Image takes full width of the left section */
-    height: 100%;    /* Height adjusts to maintain aspect ratio */
-    object-fit: cover;    /* Ensures image covers the container, cropping if needed */
+    width: 100%;    
+    height: 100%;    
+    object-fit: cover;    
     border-radius: 10px;
 }
 
@@ -131,3 +132,238 @@ button:hover {
     color: #00796b;
     text-decoration: none;
 }
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    overflow-x: auto; /* allow scroll only when needed */
+}
+
+/* === Left Section === */
+.left-section {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    overflow-x: auto;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 100%;
+    min-width: 0; /* important for flex scroll */
+    overflow: hidden;
+}
+
+.logo img {
+    width: 120px;
+    margin: 20px;
+    z-index: 2;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.welcome-text {
+    color: rgb(63, 186, 147);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    gap: 20px;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+/* === Right Section === */
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    min-width: 0;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 40px 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #999;
+}
+
+.input-box .fa-user,
+.input-box .fa-lock {
+    left: 10px;
+}
+
+.toggle-password {
+    right: 10px;
+    left: auto;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00695c;
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #00796b;
+    text-decoration: none;
+}
+
+.powered-by {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* === Responsive Breakpoints === */
+@media (max-width: 992px) {
+    .welcome-text {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        flex: none;
+        height: auto;
+    }
+
+    .left-section {
+        height: 40vh;
+    }
+
+    .right-section {
+        height: auto;
+    }
+
+    .login-box {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box h2 {
+        font-size: 20px;
+    }
+
+    .input-box input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .welcome-text {
+        font-size: 12px;
+        padding: 10px 8px;
+        left: 1px;
+        
+    }
+}
+
+/* Force horizontal scroll on ultra small screens if image doesn't fit */
+@media (max-width: 400px) {
+    .left-section {
+        min-width: 480px; /* triggers horizontal scroll */
+    }
+}
+
+

@@ -107,3 +107,84 @@ footer{
     width: 100%;
     margin-top: 10px;
 }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction:row;
+        padding: 10px 0;
+    }
+
+    #navbar ul li a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .container {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .form-group {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+    }
+
+    button.submit-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    #navbar ul li a {
+        padding: 8px;
+    }
+
+    .container {
+        width: 95%;
+        height: auto;
+    }
+
+    .form-group {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    input, textarea, select {
+        font-size: 12px;
+    }
+
+    button.submit-btn {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

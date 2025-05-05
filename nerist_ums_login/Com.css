@@ -9,21 +9,75 @@ body {
     background: linear-gradient(135deg, #ff9a9e, #fad0c4 40%, #fbc2eb 60%, #8ec5fc, #a9def9);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Allow vertical stacking */
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    background-color: #0056b3;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #cce6ff;
+}
+
+/* User Icon & Details */
+#userChar {
+    background-color: #003d80;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#userDetails {
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 /* Container Styling */
 .container {
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1s ease-in-out;
-
-    
-
+    margin: 40px auto;
 }
 
 h1 {
@@ -93,5 +147,39 @@ button:hover {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 0.95rem;
+    }
+
+    input, select, textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
     }
 }

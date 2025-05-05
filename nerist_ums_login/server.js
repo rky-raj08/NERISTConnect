@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const bodyParser = require('body-parser');
 const pool = require('./db');
 const cors = require("cors");
@@ -8,11 +9,18 @@ const { v4: uuidv4 } = require('uuid');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
+
+
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'Front', 'index1.html'));
+});
 
 
 // ✅ Custom function to generate 8-character uppercase alphanumeric reference
@@ -34,6 +42,9 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
+// app.get('/',async(req,res) =>{
+//   return res.sendFile(path.join(__dirname, '../Front/index1.html'))
+// })
 // Upload route
 app.post('/upload', upload.single('file'), async (req, res) => {
   try {
@@ -105,6 +116,7 @@ app.put('/admin/update-file', async (req, res) => {
     res.status(500).json({ error: 'Error updating file' });
   }
 });
+
 
 
 
