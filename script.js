@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 const loginUser = async (username, password) => {
-    result = false;
-    const res = await fetch('http://localhost:5000/login', {
+    // result = false;
+    const res = await fetch('https://neristconnect.onrender.com/login', {
         method: "POST",
         body: JSON.stringify({ username: username, password_hash: password }),
         headers: {

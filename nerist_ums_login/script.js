@@ -13,7 +13,7 @@ document.getElementById('complaintForm').addEventListener('submit', async functi
 
     try {
         // console.log('here1')
-        const response = await fetch('http://localhost:5000/complaint1/submit', {
+        const response = await fetch('https://neristconnect.onrender.com/complaint1/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(complaintData)

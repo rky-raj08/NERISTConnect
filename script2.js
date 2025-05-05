@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
          }
  
          // Send suggestion to backend
-         const response = await fetch("http://localhost:5000/feedback/submit", {
+         const response = await fetch("https://neristconnect.onrender.com/feedback/submit", {
              method: "POST",
              headers: { "Content-Type": "application/json" },
              body: JSON.stringify({ suggestion: suggestionText }),

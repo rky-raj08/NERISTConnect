@@ -4,7 +4,7 @@ window.onload = fetchWaterComplaints;
 // Function to fetch water complaints from the backend
 async function fetchWaterComplaints() {
     try {
-        const response = await fetch("http://localhost:5000/water_complaints/all");
+        const response = await fetch("https://neristconnect.onrender.com/water_complaints/all");
         const complaints = await response.json(); // assuming it's an array of complaints
         console.log(complaints); // Check the fetched data in console
 
@@ -37,7 +37,7 @@ async function fetchWaterComplaints() {
 // Function to delete a complaint
 async function deleteComplaint(id) {
     try {
-        const response = await fetch(`http://localhost:5000/water_complaints/delete/${id}`, {
+        const response = await fetch(`https://neristconnect.onrender.com/water_complaints/delete/${id}`, {
             method: 'DELETE'
         });
         const result = await response.json();

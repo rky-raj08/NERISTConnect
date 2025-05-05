@@ -4,7 +4,7 @@
 async function fetchLeaveRequests() {
     try {
         // Fetch leave data from backend
-        const response = await fetch('http://localhost:5000/leave/all');
+        const response = await fetch('https://neristconnect.onrender.com/leave/all');
         const leaveRequests = await response.json();
 
         // Get the table body element
@@ -56,7 +56,7 @@ window.onload = fetchLeaveRequests;
 // Function to fetch and display leave requests
 async function fetchLeaveRequests() {
     try {
-        const response = await fetch('http://localhost:5000/leave/all');
+        const response = await fetch('https://neristconnect.onrender.com/leave/all');
         const leaveRequests = await response.json();
 
         const tableBody = document.getElementById('leaveTable');
@@ -116,7 +116,7 @@ function attachButtonHandlers() {
 // Function to send status update to backend and trigger email
 async function handleAction(id, status, email, name) {
     try {
-        const updateResponse = await fetch(`http://localhost:5000/leave/update/${id}`, {
+        const updateResponse = await fetch(`https://neristconnect.onrender.com/leave/update/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status })
@@ -141,7 +141,7 @@ async function handleDelete(id) {
     if (!confirm('Are you sure you want to delete this request?')) return;
 
     try {
-        const response = await fetch(`http://localhost:5000/leave/delete/${id}`, {
+        const response = await fetch(`https://neristconnect.onrender.com/leave/delete/${id}`, {
             method: 'DELETE'
         });
 
@@ -159,7 +159,7 @@ async function handleDelete(id) {
 // Function to trigger backend email notification
 async function sendEmailNotification(email, name, status) {
     try {
-        await fetch(`http://localhost:5000/leave/notify`, {
+        await fetch(`https://neristconnect.onrender.com/leave/notify`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

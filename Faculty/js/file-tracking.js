@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Function to fetch file tracking data based on selected file type
   async function fetchFileTrackingData(fileType) {
     try {
-      const response = await fetch(`http://localhost:5000/get-file-tracking?fileType=${fileType}`);
+      const response = await fetch(`https://neristconnect.onrender.com/get-file-tracking?fileType=${fileType}`);
       const data = await response.json();
 
       // Clear previous table data
@@ -98,7 +98,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
   formData.append('file', fileInput.files[0]);
 
   try {
-    const response = await fetch('http://localhost:5000/upload', {
+    const response = await fetch('https://neristconnect.onrender.com/upload', {
       method: 'POST',
       body: formData
     });
@@ -124,7 +124,7 @@ document.getElementById('trackForm').addEventListener('submit', async function (
   const trackResult = document.getElementById('trackResult');
 
   try {
-    const response = await fetch(`http://localhost:5000/track-file?reference=${ref}`);
+    const response = await fetch(`https://neristconnect.onrender.com/track-file?reference=${ref}`);
     const data = await response.json();
 
     if (response.ok && data) {

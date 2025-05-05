@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/leave', {
+            const response = await fetch('https://neristconnect.onrender.com/leave', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

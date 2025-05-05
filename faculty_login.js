@@ -1,7 +1,7 @@
 const loginForm = document.getElementById('login-form');
 
 const loginfaculty = async (username, password) => {
-    const res = await fetch('http://localhost:5000/faculty-login', {
+    const res = await fetch('https://neristconnect.onrender.com/faculty-login', {
         method: "POST",
         body: JSON.stringify({ username: username, password_hash: password }),
         headers: {

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const responseDiv = document.getElementById("response");
 
         try {
-            const response = await fetch("http://localhost:5000/faculty-complaint", {
+            const response = await fetch("https://neristconnect.onrender.com/faculty-complaint", {
                 method: "POST",
                 body: formData,
             });
@@ -44,7 +44,7 @@ document.getElementById('complaintForm').addEventListener('submit', async functi
     };
 
     try {
-        const response = await fetch('http://localhost:5000/faculty-complaint/submit', {
+        const response = await fetch('https://neristconnect.onrender.com/faculty-complaint/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(complaintData)

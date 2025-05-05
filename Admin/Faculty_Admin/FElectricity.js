@@ -2,7 +2,7 @@
 async function fetchComplaints() {
     try {
         // Fetch complaints from the backend
-        const response = await fetch('http://localhost:5000/FEcomplaints/all');
+        const response = await fetch('https://neristconnect.onrender.com/FEcomplaints/all');
         const complaints = await response.json();
 
         // Get the table body element

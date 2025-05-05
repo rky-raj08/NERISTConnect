@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
             // Send book details to the server
-            const response = await fetch("http://localhost:5000/books", {
+            const response = await fetch("https://neristconnect.onrender.com/books", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(bookData)
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Function to Fetch and Display Books
 async function fetchBooks() {
     try {
-        const response = await fetch("http://localhost:5000/books");
+        const response = await fetch("https://neristconnect.onrender.com/books");
         const books = await response.json();
         const bookTable = document.getElementById("bookTable");
         bookTable.innerHTML = ""; // Clear previous entries
@@ -64,7 +64,7 @@ async function deleteBook(id) {
     if (!confirm("Are you sure you want to delete this book?")) return; // Confirmation alert
 
     try {
-        const response = await fetch(`http://localhost:5000/books/${id}`, { method: "DELETE" });
+        const response = await fetch(`https://neristconnect.onrender.com/books/${id}`, { method: "DELETE" });
         const result = await response.json();
 
         if (response.ok) {

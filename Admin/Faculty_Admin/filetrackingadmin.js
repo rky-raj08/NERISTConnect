@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const tableBody = document.querySelector('#fileTable tbody');
   
     async function fetchFiles() {
-      const response = await fetch('http://localhost:5000/admin/files');
+      const response = await fetch('https://neristconnect.onrender.com/admin/files');
       const files = await response.json();
       tableBody.innerHTML = '';
       files.forEach(file => {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           const newStatus = row.querySelector('.statusInput').value;
           const ref = file.reference;
   
-          const res = await fetch('http://localhost:5000/admin/update-file', {
+          const res = await fetch('https://neristconnect.onrender.com/admin/update-file', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ reference: ref, location: newLoc, status: newStatus })
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const tableBody = document.querySelector('#fileTable tbody');
   
     async function fetchFiles() {
-      const response = await fetch('http://localhost:5000/admin/files');
+      const response = await fetch('https://neristconnect.onrender.com/admin/files');
       const files = await response.json();
       tableBody.innerHTML = '';
   
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <td>${file.status}</td>
   
           <!-- ✅ Added view/download file link -->
-          <td><a href="http://localhost:5000${file.filepath}" target="_blank">View File</a></td>
+          <td><a href="https://neristconnect.onrender.com${file.filepath}" target="_blank">View File</a></td>
   
           <td><input type="text" value="${file.location}" class="locInput" /></td>
           <td><input type="text" value="${file.status}" class="statusInput" /></td>
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           const newStatus = row.querySelector('.statusInput').value;
           const ref = file.reference;
   
-          const res = await fetch('http://localhost:5000/admin/update-file', {
+          const res = await fetch('https://neristconnect.onrender.com/admin/update-file', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ reference: ref, location: newLoc, status: newStatus })

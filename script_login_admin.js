@@ -7,7 +7,7 @@
 // }
 const loginUser = async (username, password) => {
     result = false;
-    const res = await fetch('http://localhost:5000/login', {
+    const res = await fetch('https://neristconnect.onrender.com/login', {
         method: "POST",
         body: JSON.stringify({ username: username, password_hash: password }),
         headers: {
@@ -57,7 +57,7 @@ loginForm.addEventListener('submit', (e) => handleLogin(e))
 const loginForm = document.getElementById('login-form');
 
 const loginAdmin = async (username, password) => {
-    const res = await fetch('http://localhost:5000/admin-login', {
+    const res = await fetch('https://neristconnect.onrender.com/admin-login', {
         method: "POST",
         body: JSON.stringify({ username: username, password_hash: password }),
         headers: {

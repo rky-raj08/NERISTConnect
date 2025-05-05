@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
             // Sending data to the backend
-            const response = await fetch("http://localhost:5000/certificate/submit", {
+            const response = await fetch("https://neristconnect.onrender.com/certificate/submit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(certificateData),

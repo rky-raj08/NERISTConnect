@@ -11,7 +11,7 @@ function showStep(stepId) {
 async function sendOTP() {
   userEmail = document.getElementById("email").value;
 
-  const res = await fetch('http://localhost:5000/forgot-password', {
+  const res = await fetch('https://neristconnect.onrender.com/forgot-password', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: userEmail })
@@ -29,7 +29,7 @@ async function sendOTP() {
 async function verifyOTP() {
   const otp = document.getElementById("otp").value;
 
-  const res = await fetch('http://localhost:5000/verify-otp', {
+  const res = await fetch('https://neristconnect.onrender.com/verify-otp', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: userEmail, otp })
@@ -48,7 +48,7 @@ async function resetPassword() {
   const newPassword = document.getElementById("new-password").value;
   const otp = document.getElementById("otp").value;
 
-  const res = await fetch('http://localhost:5000/reset-password', {
+  const res = await fetch('https://neristconnect.onrender.com/reset-password', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: userEmail, otp, newPassword })

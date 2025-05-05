@@ -1,6 +1,6 @@
 async function fetchComplaints() {
     try {
-        const response = await fetch('http://localhost:5000/complaints/all');
+        const response = await fetch('https://neristconnect.onrender.com/complaints/all');
         const complaints = await response.json();
 
         const tableBody = document.getElementById('complaintsTable');

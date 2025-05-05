@@ -142,7 +142,7 @@ app.post('/login', async (req, res) => {
       'SELECT * FROM Accounts WHERE username = $1 AND password_hash = $2',
       [username,password_hash] 
     );
-    // console.log(result.rows)
+    console.log(result.rows)
     if (result.rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }

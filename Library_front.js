@@ -2,7 +2,7 @@
 async function fetchBooks() {
     try {
         // Fetch book details from the backend
-        const response = await fetch('http://localhost:5000/books');
+        const response = await fetch('https://neristconnect.onrender.com/books');
         const books = await response.json();
 
         // Get the table body element

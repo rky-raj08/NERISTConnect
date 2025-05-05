@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const tableBody = document.getElementById("certificateTable");
 
     try {
-        const response = await fetch("http://localhost:5000/certificates/all");
+        const response = await fetch("https://neristconnect.onrender.com/certificates/all");
         const certificates = await response.json();
 
         certificates.forEach((certificate, index) => {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 // Function to update status and send email if approved
 async function updateCertificateStatus(id, status) {
     try {
-        const response = await fetch(`http://localhost:5000/certificate/update/${id}`, {
+        const response = await fetch(`https://neristconnect.onrender.com/certificate/update/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ status })
@@ -64,7 +64,7 @@ async function updateCertificateStatus(id, status) {
                 const email = row.children[3].textContent;
                 const certificate_type = row.children[4].textContent;
 
-                await fetch("http://localhost:5000/send-email", {
+                await fetch("https://neristconnect.onrender.com/send-email", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
@@ -89,7 +89,7 @@ async function deleteCertificate(id, button) {
     const row = button.closest("tr");
 
     try {
-        const response = await fetch(`http://localhost:5000/certificates/${id}`, {
+        const response = await fetch(`https://neristconnect.onrender.com/certificates/${id}`, {
             method: "DELETE"
         });
 

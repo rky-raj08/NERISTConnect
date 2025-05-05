@@ -25,7 +25,7 @@ document.getElementById("waterComplaintForm").addEventListener("submit", async f
 
     try {
         // Send POST request to the backend
-        const response = await fetch("http://localhost:5000/FWcomplaints", {
+        const response = await fetch("https://neristconnect.onrender.com/FWcomplaints", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -25,7 +25,7 @@ document.getElementById("complaintForm").addEventListener("submit", async functi
 
     try {
         // Send data to backend
-        const response = await fetch("http://localhost:5000/Ecomplaints/submit", {
+        const response = await fetch("https://neristconnect.onrender.com/Ecomplaints/submit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

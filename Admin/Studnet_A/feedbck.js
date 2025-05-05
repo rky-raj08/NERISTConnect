@@ -2,7 +2,7 @@
 async function fetchSuggestions() {
     try {
         // Fetch suggestions from the backend
-        const response = await fetch('http://localhost:5000/feedback/all');
+        const response = await fetch('https://neristconnect.onrender.com/feedback/all');
         const suggestions = await response.json();
 
         // Get the table body element
