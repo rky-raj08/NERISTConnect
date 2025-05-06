@@ -718,7 +718,7 @@ body {
         display: flex; /* Use flexbox */
         flex-wrap: wrap; /* Allow wrapping of items to next row */
         justify-content: space-between; /* Distribute modules evenly */
-        margin-top: 30px;
+        margin-top: 70px;
       
     }
   
